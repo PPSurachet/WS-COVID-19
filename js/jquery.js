@@ -1,4 +1,4 @@
-$(function () {
+$(function () {   
     jQuery("#vmap").vectorMap({
         map: "world_en",
         backgroundColor: "#000080",
