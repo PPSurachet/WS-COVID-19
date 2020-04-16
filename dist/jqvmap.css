@@ -14,8 +14,7 @@
 .jqvmap-pin {
   pointer-events: none;
 }
-.jqvmap-zoomin,
-.jqvmap-zoomout {
+.jqvmap-zoomin,.jqvmap-zoomout {
   position: absolute;
   left: 10px;
   -webkit-border-radius: 3px;
@@ -38,6 +37,7 @@
 .jqvmap-region {
   cursor: pointer;
 }
+
 .jqvmap-ajax_response {
   width: 100%;
   height: 500px;

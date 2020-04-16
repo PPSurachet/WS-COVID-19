@@ -1,9 +1,9 @@
 $(function () {   
     jQuery("#vmap").vectorMap({
         map: "world_en",
-        backgroundColor: "#000080",
-        borderColor: "#818181",
-        borderOpacity: 0.5,
+        backgroundColor: "#363636",
+        borderColor: "#000000",
+        borderOpacity: 0.7,
         borderWidth: 1,
         color: "#ffffff",
         enableZoom: true,
