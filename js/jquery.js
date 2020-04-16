@@ -1,18 +1,15 @@
 $(function () {
     jQuery("#vmap").vectorMap({
         map: "world_en",
-        backgroundColor: "#1e90ff",
+        backgroundColor: "#000080",
         borderColor: "#818181",
-        borderOpacity: 0.25,
+        borderOpacity: 0.5,
         borderWidth: 1,
-        color: "#f4f3f0",
+        color: "#ffffff",
         enableZoom: true,
         hoverColor: "#EECFA1",
-        hoverOpacity: null,
         normalizeFunction: "linear",
-        scaleColors: ["#b6d6ff", "#005ace"],
-        selectedColor: "#FA8072",
-        selectedRegions: null,
+        selectedColor: "#FF4040",
         showTooltip: true,
         onRegionClick: function (element, code, region) {
         var message =
