@@ -17,8 +17,34 @@ $(function () {
             $.getJSON(url, function (result) {
                 var selectedCountry = result[region];
                 console.log(selectedCountry);
-                var total = selectedCountry.length;
-                console.log(total);
+                if(selectedCountry != null){
+                    var total = selectedCountry.length;
+                    console.log(total);
+                }
+            });
+        },
+    });
+
+    jQuery("#vvmap").vectorMap({
+        map: "world_en",
+        backgroundColor: "#3333FF",
+        borderColor: "#ffffff",
+        borderOpacity: 2,
+        borderWidth: 1,
+        color: "#3333FF",
+        enableZoom: true,
+        hoverColor: "#EECFA1",
+        normalizeFunction: "linear",
+        selectedColor: "#FF4040",
+        showTooltip: true,
+        onRegionClick: function (element, code, region) {
+            $.getJSON(url, function (result) {
+                var selectedCountry = result[region];
+                console.log(selectedCountry);
+                if(selectedCountry != null){
+                    var total = selectedCountry.length;
+                    console.log(total);
+                }
             });
         },
     });
