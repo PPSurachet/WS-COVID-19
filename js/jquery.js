@@ -1,23 +1,25 @@
-$(function () {   
+$(function () {
+    var url = "https://pomber.github.io/covid19/timeseries.json";
+
     jQuery("#vmap").vectorMap({
         map: "world_en",
-        backgroundColor: "#363636",
-        borderColor: "#000000",
-        borderOpacity: 0.7,
+        backgroundColor: "#1C1C1C",
+        borderColor: "#ffffff",
+        borderOpacity: 2,
         borderWidth: 1,
-        color: "#ffffff",
+        color: "#1C1C1C",
         enableZoom: true,
         hoverColor: "#EECFA1",
         normalizeFunction: "linear",
         selectedColor: "#FF4040",
         showTooltip: true,
         onRegionClick: function (element, code, region) {
-        var message =
-            'You clicked "' +
-            region +
-            '" which has the code: ' +
-            code.toUpperCase();
-        alert(message);
+            $.getJSON(url, function (result) {
+                var selectedCountry = result[region];
+                console.log(selectedCountry);
+                var total = selectedCountry.length;
+                console.log(total);
+            });
         },
     });
 });
