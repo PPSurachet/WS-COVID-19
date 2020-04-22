@@ -24,18 +24,16 @@ $(function () {
         });
         },
     })
-
-        var TotalDate1 = [],TotalDate2 = [],TotalDate3 = [],TotalDate4 = [],TotalDate5 = [],TotalDate6 = [],TotalDate7 = [];
-        var TotalC1 = [],TotalC2 = [],TotalC3 = [],TotalC4 = [],TotalC5 = [],TotalC6 = [],TotalC7 = [];
-        var TotalR1 = [],TotalR2 = [],TotalR3 = [],TotalR4 = [],TotalR5 = [],TotalR6 = [],TotalR7 = [];
-        var TotalD1 = [],TotalD2 = [],TotalD3 = [],TotalD4 = [],TotalD5 = [],TotalD6 = [],TotalD7 = [];
+        var TotalDate1 = [],TotalDate2 = [],TotalDate3 = [],TotalDate4 = [];
+        var TotalC1 = [],TotalC2 = [],TotalC3 = [],TotalC4 = [];
+        var TotalR1 = [],TotalR2 = [],TotalR3 = [],TotalR4 = [];
+        var TotalD1 = [],TotalD2 = [],TotalD3 = [],TotalD4 = [];
         
         $.getJSON(url,function (result) {
 
-            var Date1 = 0,Date2 = 0,Date3 = 0,Date4 = 0,Date5 = 0,Date6 = 0,Date7 = 0;
-            var Deaths1 = 0,Deaths2 = 0,Deaths3 = 0,Deaths4 = 0,Deaths5 = 0,Deaths6 = 0,Deaths7 = 0;
-            var Recovery1 = 0,Recovery2 = 0,Recovery3 = 0,Recovery4 = 0,Recovery5 = 0,Recovery6 = 0,Recovery7 = 0;
-            var Confirmed1 = 0,Confirmed2 = 0,Confirmed3 = 0,Confirmed4 = 0,Confirmed5 = 0,Confirmed6 = 0,Confirmed7 = 0;
+            var Deaths1 = 0,Deaths2 = 0,Deaths3 = 0,Deaths4 = 0;
+            var Recovery1 = 0,Recovery2 = 0,Recovery3 = 0,Recovery4 = 0;
+            var Confirmed1 = 0,Confirmed2 = 0,Confirmed3 = 0,Confirmed4 = 0;
 
             for (var country in result) {
 
@@ -63,6 +61,7 @@ $(function () {
                 Recovery4 = Recovery4 + selectedCountry[total-4].recovered;
 
             }
+
             TotalC1.push(Confirmed1),TotalC2.push(Confirmed2),TotalC3.push(Confirmed3),
             TotalC4.push(Confirmed4)
             
@@ -78,11 +77,15 @@ $(function () {
             $("#TRecovery").append(Recovery1);
             $("#TConfirms").append(Confirmed1);
             $("#TDeaths").append(Deaths1);
+            $("#LastDate").append(Date1);
+            $("#LastDate1").append(Date1);
+            $("#LastDate2").append(Date1);
 
             demo.initDashboardPageCharts(TotalC4,TotalC3,TotalC2,TotalC1,
             TotalDate4,TotalDate3,TotalDate2,TotalDate1,
             TotalD4,TotalD3,TotalD2,TotalD1,
             TotalR4,TotalR3,TotalR2,TotalR1);
+            
         });
     
 });

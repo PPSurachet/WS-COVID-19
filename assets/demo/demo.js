@@ -169,9 +169,18 @@ demo = {
         gradientStroke.addColorStop(0, '#80b6f4');
         gradientStroke.addColorStop(1, chartColor);
 
-        var gradientFill = ctx.createLinearGradient(0, 200, 0, 50);
+        gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
         gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-        gradientFill.addColorStop(1, "rgba(255, 255, 255, 0.24)");
+        gradientFill.addColorStop(1, hexToRGB('#2CA8FF', 0.6));
+
+        gradientFillRecovery = ctx.createLinearGradient(0, 170, 0, 50);
+        gradientFillRecovery.addColorStop(0, "rgba(128, 182, 244, 0)");
+        gradientFillRecovery.addColorStop(1, hexToRGB('#18ce0f',0.4));
+
+        gradientFillDeaths = ctx.createLinearGradient(0, 170, 0, 50);
+        gradientFillDeaths.addColorStop(0, "rgba(128, 182, 244, 0)");
+        gradientFillDeaths.addColorStop(1, "rgba(255,0,0,0.3)");    
+
     
 
         var myChart = new Chart(ctx, {
@@ -180,10 +189,9 @@ demo = {
                 labels: [TotalDate4,TotalDate3,TotalDate2,TotalDate1],
                 datasets: [{
                     label: "Confirms",
-                    borderColor: chartColor,
-                    pointBorderColor: chartColor,
-                    pointBackgroundColor: "#1e3d60",
-                    pointHoverBackgroundColor: "#1e3d60",
+                    borderColor: "#2CA8FF",
+                    pointBorderColor: "#FFF",
+                    pointBackgroundColor: "#2CA8FF",
                     pointHoverBorderColor: chartColor,
                     pointBorderWidth: 1,
                     pointHoverRadius: 7,
@@ -195,25 +203,23 @@ demo = {
                     data: [TotalC4,TotalC3,TotalC2,TotalC1]
                 },{
                     label: "Recovery",
-                    borderColor: chartColor,
-                    pointBorderColor: chartColor,
-                    pointBackgroundColor: "#1e3d60",
-                    pointHoverBackgroundColor: "#1e3d60",
+                    borderColor: "#18ce0f",
+                    pointBorderColor: "#FFF",
+                    pointBackgroundColor: "#18ce0f",
                     pointHoverBorderColor: chartColor,
                     pointBorderWidth: 1,
                     pointHoverRadius: 7,
                     pointHoverBorderWidth: 2,
                     pointRadius: 5,
                     fill: true,
-                    backgroundColor: gradientFill,
+                    backgroundColor: gradientFillRecovery,
                     borderWidth: 2,
                     data: [TotalR4,TotalR3,TotalR2,TotalR1]
                 },{
                     label: "Deaths",
-                    borderColor: chartColor,
-                    pointBorderColor: chartColor,
-                    pointBackgroundColor: "#1e3d60",
-                    pointHoverBackgroundColor: "#1e3d60",
+                    borderColor: "#DC143C",
+                    pointBorderColor: "#FFF",
+                    pointBackgroundColor: "#DC143C",
                     pointHoverBorderColor: chartColor,
                     pointBorderWidth: 1,
                     pointHoverRadius: 7,
@@ -289,13 +295,9 @@ demo = {
 
         ctx = document.getElementById('lineChartExample').getContext("2d");
 
-        gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-        gradientStroke.addColorStop(0, '#80b6f4');
-        gradientStroke.addColorStop(1, chartColor);
-
         gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
         gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-        gradientFill.addColorStop(1, "rgba(249, 99, 59, 0.40)");
+        gradientFill.addColorStop(1, hexToRGB('#2CA8FF', 0.6));
 
         myChart = new Chart(ctx, {
             type: 'line',
@@ -304,9 +306,9 @@ demo = {
                 labels: [TotalDate4,TotalDate3,TotalDate2,TotalDate1],
                 datasets: [{
                     label: "Confirms",
-                    borderColor: "#f96332",
+                    borderColor: "#2CA8FF",
                     pointBorderColor: "#FFF",
-                    pointBackgroundColor: "#f96332",
+                    pointBackgroundColor: "#2CA8FF",
                     pointBorderWidth: 2,
                     pointHoverRadius: 4,
                     pointHoverBorderWidth: 1,
@@ -324,12 +326,12 @@ demo = {
         ctx = document.getElementById('lineChartExampleRecovery').getContext("2d");
 
         gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-        gradientStroke.addColorStop(0, '#80b6f4');
+        gradientStroke.addColorStop(0, '#18ce0f');
         gradientStroke.addColorStop(1, chartColor);
 
         gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
         gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-        gradientFill.addColorStop(1, "rgba(249, 99, 59, 0.40)");
+        gradientFill.addColorStop(1, hexToRGB('#18ce0f',0.4));
 
         myChart = new Chart(ctx, {
             type: 'line',
@@ -337,10 +339,10 @@ demo = {
             data: {
                 labels: [TotalDate4,TotalDate3,TotalDate2,TotalDate1],
                 datasets: [{
-                    label: "Active Users",
-                    borderColor: "#f96332",
+                    label: "Recovery",
+                    borderColor: "#18ce0f",
                     pointBorderColor: "#FFF",
-                    pointBackgroundColor: "#f96332",
+                    pointBackgroundColor: "#18ce0f",
                     pointBorderWidth: 2,
                     pointHoverRadius: 4,
                     pointHoverBorderWidth: 1,
@@ -362,7 +364,7 @@ demo = {
 
         gradientFill = ctx.createLinearGradient(0, 170, 0, 50);
         gradientFill.addColorStop(0, "rgba(128, 182, 244, 0)");
-        gradientFill.addColorStop(1, "rgba(249, 99, 59, 0.40)");
+        gradientFill.addColorStop(1, "rgba(255,0,0,0.3)");    
 
         myChart = new Chart(ctx, {
             type: 'line',
@@ -370,10 +372,10 @@ demo = {
             data: {
                 labels: [TotalDate4,TotalDate3,TotalDate2,TotalDate1],
                 datasets: [{
-                    label: "Active Users",
-                    borderColor: "#f96332",
+                    label: "Deaths",
+                    borderColor: "#DC143C",
                     pointBorderColor: "#FFF",
-                    pointBackgroundColor: "#f96332",
+                    pointBackgroundColor: "#DC143C",
                     pointBorderWidth: 2,
                     pointHoverRadius: 4,
                     pointHoverBorderWidth: 1,
