@@ -65,10 +65,11 @@ demo = {
             }
         };},
 
-        initDashboardPageCharts: function(TotalC4,TotalC3,TotalC2,TotalC1,
-            TotalDate4,TotalDate3,TotalDate2,TotalDate1,
-            TotalD4,TotalD3,TotalD2,TotalD1,
-            TotalR4,TotalR3,TotalR2,TotalR1){
+        initDashboardPageCharts: function(
+            TotalC7,TotalC6,TotalC5,TotalC4,TotalC3,TotalC2,TotalC1,
+            TotalDate7,TotalDate6,TotalDate5,TotalDate4,TotalDate3,TotalDate2,TotalDate1,
+            TotalD7,TotalD6,TotalD5,TotalD4,TotalD3,TotalD2,TotalD1,
+            TotalR7,TotalR6,TotalR5,TotalR4,TotalR3,TotalR2,TotalR1){
             
         chartColor = "#FFFFFF";
         
@@ -186,7 +187,7 @@ demo = {
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: [TotalDate4,TotalDate3,TotalDate2,TotalDate1],
+                labels: [TotalDate7,TotalDate6,TotalDate5,TotalDate4,TotalDate3,TotalDate2,TotalDate1],
                 datasets: [{
                     label: "Confirms",
                     borderColor: "#2CA8FF",
@@ -200,7 +201,7 @@ demo = {
                     fill: true,
                     backgroundColor: gradientFill,
                     borderWidth: 2,
-                    data: [TotalC4,TotalC3,TotalC2,TotalC1]
+                    data: [TotalC7,TotalC6,TotalC5,TotalC4,TotalC3,TotalC2,TotalC1]
                 },{
                     label: "Recovery",
                     borderColor: "#18ce0f",
@@ -214,7 +215,7 @@ demo = {
                     fill: true,
                     backgroundColor: gradientFillRecovery,
                     borderWidth: 2,
-                    data: [TotalR4,TotalR3,TotalR2,TotalR1]
+                    data: [TotalR7,TotalR6,TotalR5,TotalR4,TotalR3,TotalR2,TotalR1]
                 },{
                     label: "Deaths",
                     borderColor: "#DC143C",
@@ -226,9 +227,9 @@ demo = {
                     pointHoverBorderWidth: 2,
                     pointRadius: 5,
                     fill: true,
-                    backgroundColor: gradientFill,
+                    backgroundColor: gradientFillDeaths,
                     borderWidth: 2,
-                    data: [TotalD4,TotalD3,TotalD2,TotalD1]
+                    data: [TotalD7,TotalD6,TotalD5,TotalD4,TotalD3,TotalD2,TotalD1]
                 }]
             },
             options: {
@@ -303,7 +304,7 @@ demo = {
             type: 'line',
             responsive: true,
             data: {
-                labels: [TotalDate4,TotalDate3,TotalDate2,TotalDate1],
+                labels: [TotalDate7,TotalDate6,TotalDate5,TotalDate4,TotalDate3,TotalDate2,TotalDate1],
                 datasets: [{
                     label: "Confirms",
                     borderColor: "#2CA8FF",
@@ -316,7 +317,7 @@ demo = {
                     fill: true,
                     backgroundColor: gradientFill,
                     borderWidth: 2,
-                    data: [TotalC4,TotalC3,TotalC2,TotalC1]
+                    data: [TotalC7,TotalC6,TotalC5,TotalC4,TotalC3,TotalC2,TotalC1]
                 }]
             },
             options: gradientChartOptionsConfiguration
@@ -337,7 +338,7 @@ demo = {
             type: 'line',
             responsive: true,
             data: {
-                labels: [TotalDate4,TotalDate3,TotalDate2,TotalDate1],
+                labels: [TotalDate7,TotalDate6,TotalDate5,TotalDate4,TotalDate3,TotalDate2,TotalDate1],
                 datasets: [{
                     label: "Recovery",
                     borderColor: "#18ce0f",
@@ -350,7 +351,7 @@ demo = {
                     fill: true,
                     backgroundColor: gradientFill,
                     borderWidth: 2,
-                    data: [TotalR4,TotalR3,TotalR2,TotalR1]
+                    data: [TotalR7,TotalR6,TotalR5,TotalR4,TotalR3,TotalR2,TotalR1]
                 }]
             },
             options: gradientChartOptionsConfiguration
@@ -370,7 +371,7 @@ demo = {
             type: 'line',
             responsive: true,
             data: {
-                labels: [TotalDate4,TotalDate3,TotalDate2,TotalDate1],
+                labels: [TotalDate7,TotalDate6,TotalDate5,TotalDate4,TotalDate3,TotalDate2,TotalDate1],
                 datasets: [{
                     label: "Deaths",
                     borderColor: "#DC143C",
@@ -383,7 +384,7 @@ demo = {
                     fill: true,
                     backgroundColor: gradientFill,
                     borderWidth: 2,
-                    data: [TotalD4,TotalD3,TotalD2,TotalD1]
+                    data: [TotalD7,TotalD6,TotalD5,TotalD4,TotalD3,TotalD2,TotalD1]
                 }]
             },
             options: gradientChartOptionsConfiguration

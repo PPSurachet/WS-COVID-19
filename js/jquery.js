@@ -1,16 +1,11 @@
 $(function () {
     var url = "https://pomber.github.io/covid19/timeseries.json";
-    
-        var TotalDate1 = [],TotalDate2 = [],TotalDate3 = [],TotalDate4 = [];
-        var TotalC1 = [],TotalC2 = [],TotalC3 = [],TotalC4 = [];
-        var TotalR1 = [],TotalR2 = [],TotalR3 = [],TotalR4 = [];
-        var TotalD1 = [],TotalD2 = [],TotalD3 = [],TotalD4 = [];
         
         $.getJSON(url,function (result) {
 
-            var Deaths1 = 0,Deaths2 = 0,Deaths3 = 0,Deaths4 = 0;
-            var Recovery1 = 0,Recovery2 = 0,Recovery3 = 0,Recovery4 = 0;
-            var Confirmed1 = 0,Confirmed2 = 0,Confirmed3 = 0,Confirmed4 = 0;
+            var Deaths1 = 0,Deaths2 = 0,Deaths3 = 0,Deaths4 = 0,Deaths5 = 0,Deaths6 = 0,Deaths7 = 0;
+            var Recovery1 = 0,Recovery2 = 0,Recovery3 = 0,Recovery4 = 0,Recovery5 = 0,Recovery6 = 0,Recovery7 = 0;
+            var Confirmed1 = 0,Confirmed2 = 0,Confirmed3 = 0,Confirmed4 = 0,Confirmed5 = 0,Confirmed6 = 0,Confirmed7 = 0;
 
             for (var country in result) {
 
@@ -18,51 +13,51 @@ $(function () {
                 var total = selectedCountry.length;
 
                 Date1 = selectedCountry[total-1].date;
-                Date2 = selectedCountry[total-8].date;
-                Date3 = selectedCountry[total-15].date;
-                Date4 = selectedCountry[total-22].date;
+                Date2 = selectedCountry[total-2].date;
+                Date3 = selectedCountry[total-3].date;
+                Date4 = selectedCountry[total-4].date;
+                Date5 = selectedCountry[total-5].date;
+                Date6 = selectedCountry[total-6].date;
+                Date7 = selectedCountry[total-7].date;
 
                 Confirmed1 = Confirmed1 + selectedCountry[total-1].confirmed;
-                Confirmed2 = Confirmed2 + selectedCountry[total-8].confirmed;
-                Confirmed3 = Confirmed3 + selectedCountry[total-15].confirmed;
-                Confirmed4 = Confirmed4 + selectedCountry[total-22].confirmed;
+                Confirmed2 = Confirmed2 + selectedCountry[total-2].confirmed;
+                Confirmed3 = Confirmed3 + selectedCountry[total-3].confirmed;
+                Confirmed4 = Confirmed4 + selectedCountry[total-4].confirmed;
+                Confirmed5 = Confirmed5 + selectedCountry[total-5].confirmed;
+                Confirmed6 = Confirmed6 + selectedCountry[total-6].confirmed;
+                Confirmed7 = Confirmed7 + selectedCountry[total-7].confirmed;
 
                 Deaths1 = Deaths1 + selectedCountry[total-1].deaths;
-                Deaths2 = Deaths2 + selectedCountry[total-8].deaths;
-                Deaths3 = Deaths3 + selectedCountry[total-15].deaths;
-                Deaths4 = Deaths4 + selectedCountry[total-22].deaths;
+                Deaths2 = Deaths2 + selectedCountry[total-2].deaths;
+                Deaths3 = Deaths3 + selectedCountry[total-3].deaths;
+                Deaths4 = Deaths4 + selectedCountry[total-4].deaths;
+                Deaths5 = Deaths5 + selectedCountry[total-5].deaths;
+                Deaths6 = Deaths6 + selectedCountry[total-6].deaths;
+                Deaths7 = Deaths7 + selectedCountry[total-7].deaths;
+                
 
                 Recovery1 = Recovery1 + selectedCountry[total-1].recovered;
                 Recovery2 = Recovery2 + selectedCountry[total-2].recovered;
                 Recovery3 = Recovery3 + selectedCountry[total-3].recovered;
                 Recovery4 = Recovery4 + selectedCountry[total-4].recovered;
+                Recovery5 = Recovery5 + selectedCountry[total-5].recovered;
+                Recovery6 = Recovery6 + selectedCountry[total-6].recovered;
+                Recovery7 = Recovery7 + selectedCountry[total-7].recovered;
 
             }
 
-            TotalC1.push(Confirmed1),TotalC2.push(Confirmed2),TotalC3.push(Confirmed3),
-            TotalC4.push(Confirmed4)
+            demo.initDashboardPageCharts(
+            Confirmed7,Confirmed6,Confirmed5,Confirmed4,Confirmed3,Confirmed2,Confirmed1,
+            Date7,Date6,Date5,Date4,Date3,Date2,Date1,
+            Deaths7, Deaths6, Deaths5,Deaths4,Deaths3,Deaths2,Deaths1,
+            Recovery7,Recovery6,Recovery5,Recovery4,Recovery3,Recovery2,Recovery1
+            );
             
-            TotalDate1.push(Date1),TotalDate2.push(Date2),TotalDate3.push(Date3),
-            TotalDate4.push(Date4)
-
-            TotalD1.push(Deaths1),TotalD2.push(Deaths2),TotalD3.push(Deaths3),
-            TotalD4.push(Deaths4)
-
-            TotalR1.push(Recovery1),TotalR2.push(Recovery2),TotalR3.push(Recovery3),
-            TotalR4.push(Recovery4)
-
             $("#TRecovery").append(Recovery1);
             $("#TConfirms").append(Confirmed1);
             $("#TDeaths").append(Deaths1);
-            $("#LastDate").append(Date1);
-            $("#LastDate1").append(Date1);
-            $("#LastDate2").append(Date1);
-
-            demo.initDashboardPageCharts(TotalC4,TotalC3,TotalC2,TotalC1,
-            TotalDate4,TotalDate3,TotalDate2,TotalDate1,
-            TotalD4,TotalD3,TotalD2,TotalD1,
-            TotalR4,TotalR3,TotalR2,TotalR1);
-            
+            $("#LastDate,#LastDate1,#LastDate2").append(Date1);
         });
     
 });
