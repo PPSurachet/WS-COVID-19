@@ -19,7 +19,7 @@
         <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
         <link rel="icon" type="image/png" href="../assets/img/favicon.png">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>Now UI Dashboard by Creative Tim</title>
+        <title>Questionnaire COVID-19</title>
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
             name='viewport' />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
@@ -34,7 +34,7 @@
         <div class="wrapper ">
             <div class="sidebar" data-color="orange">
                 <div class="logo">
-                    <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+                    <a href="dashboard.html" class="simple-text logo-normal">
                         COVID-19 TimeSeries
                     </a>
                 </div>
@@ -127,25 +127,16 @@
                                             <h6><label for="">Firstname</label></h6>
                                             <input type="text" class="form-control" id="validationCustom01"
                                                 placeholder="First name" required>
-                                            <div class="valid-feedback">
-                                                Please fill your Firstname.
-                                            </div>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <h6><label for="">Lastname</label></h6>
                                             <input type="text" class="form-control" id="validationCustom01"
                                                 placeholder="Last name" required>
-                                            <div class="valid-feedback">
-                                                Please fill your Lastname.
-                                            </div>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <h6><label for="">Telephone</label></h6>
                                             <input type="text" class="form-control" id="validationCustom01"
                                                 placeholder="Telephone number" required>
-                                            <div class="valid-feedback">
-                                                Please fill your Telephone number.
-                                            </div>
                                         </div>
                                     </div>
                                     <h6 class="title">Do you currently have any of the following symtoms ?</h6>
@@ -326,6 +317,7 @@
                 document.getElementById("C4").disabled = true;
                 document.getElementById("C5").disabled = true;
                 document.getElementById("C6").disabled = true;
+                $('input[type=checkbox]').prop('checked', false);
             } else {
                 document.getElementById("C1").disabled = false;
                 document.getElementById("C2").disabled = false;

@@ -11,7 +11,7 @@ $(function () {
 
                 var selectedCountry = result[country];
                 var total = selectedCountry.length;
-
+                
                 Date1 = selectedCountry[total-1].date;
                 Date2 = selectedCountry[total-2].date;
                 Date3 = selectedCountry[total-3].date;
@@ -28,15 +28,6 @@ $(function () {
                 Confirmed6 = Confirmed6 + selectedCountry[total-6].confirmed;
                 Confirmed7 = Confirmed7 + selectedCountry[total-7].confirmed;
 
-                Deaths1 = Deaths1 + selectedCountry[total-1].deaths;
-                Deaths2 = Deaths2 + selectedCountry[total-2].deaths;
-                Deaths3 = Deaths3 + selectedCountry[total-3].deaths;
-                Deaths4 = Deaths4 + selectedCountry[total-4].deaths;
-                Deaths5 = Deaths5 + selectedCountry[total-5].deaths;
-                Deaths6 = Deaths6 + selectedCountry[total-6].deaths;
-                Deaths7 = Deaths7 + selectedCountry[total-7].deaths;
-                
-
                 Recovery1 = Recovery1 + selectedCountry[total-1].recovered;
                 Recovery2 = Recovery2 + selectedCountry[total-2].recovered;
                 Recovery3 = Recovery3 + selectedCountry[total-3].recovered;
@@ -45,8 +36,16 @@ $(function () {
                 Recovery6 = Recovery6 + selectedCountry[total-6].recovered;
                 Recovery7 = Recovery7 + selectedCountry[total-7].recovered;
 
-            }
+                Deaths1 = Deaths1 + selectedCountry[total-1].deaths;
+                Deaths2 = Deaths2 + selectedCountry[total-2].deaths;
+                Deaths3 = Deaths3 + selectedCountry[total-3].deaths;
+                Deaths4 = Deaths4 + selectedCountry[total-4].deaths;
+                Deaths5 = Deaths5 + selectedCountry[total-5].deaths;
+                Deaths6 = Deaths6 + selectedCountry[total-6].deaths;
+                Deaths7 = Deaths7 + selectedCountry[total-7].deaths;
 
+            }
+            
             demo.initDashboardPageCharts(
             Confirmed7,Confirmed6,Confirmed5,Confirmed4,Confirmed3,Confirmed2,Confirmed1,
             Date7,Date6,Date5,Date4,Date3,Date2,Date1,
