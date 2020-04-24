@@ -45,13 +45,12 @@ $(function () {
                 Deaths7 = Deaths7 + selectedCountry[total-7].deaths;
 
             }
+            var Day = [Date7,Date6,Date5,Date4,Date3,Date2,Date1];
+            var Confirmed = [Confirmed7,Confirmed6,Confirmed5,Confirmed4,Confirmed3,Confirmed2,Confirmed1];
+            var Deaths = [Deaths7, Deaths6, Deaths5,Deaths4,Deaths3,Deaths2,Deaths1];
+            var Recovery = [Recovery7,Recovery6,Recovery5,Recovery4,Recovery3,Recovery2,Recovery1];
             
-            demo.initDashboardPageCharts(
-            Confirmed7,Confirmed6,Confirmed5,Confirmed4,Confirmed3,Confirmed2,Confirmed1,
-            Date7,Date6,Date5,Date4,Date3,Date2,Date1,
-            Deaths7, Deaths6, Deaths5,Deaths4,Deaths3,Deaths2,Deaths1,
-            Recovery7,Recovery6,Recovery5,Recovery4,Recovery3,Recovery2,Recovery1
-            );
+            demo.initDashboardPageCharts(Day,Confirmed,Deaths,Recovery);
             
             $("#TRecovery").append(Recovery1);
             $("#TConfirms").append(Confirmed1);
